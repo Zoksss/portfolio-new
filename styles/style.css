@@ -2279,6 +2279,15 @@ a {
   transform: translate3d(0, -10px, 0) !important;
 }
 
+input.button-cta-orange[disabled] {
+  width: auto !important;
+  min-width: auto !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  cursor: pointer !important;
+}
+
 .button-cta.margin-top-40 {
   margin-top: 40px;
 }
