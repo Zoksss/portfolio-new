@@ -1,0 +1,30 @@
+.nav {
+  background-color: var(--darkblue);
+  height: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  position: fixed;
+  inset: 0% 0% auto;
+  top: 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.nav.hidden {
+  transform: translateY(-100%);
+}
+
+.nav.scrolled {
+  background-color: var(--darkblue); /* zameniti sa stvarnom bojom */
+}
+
+@media (max-width: 991px) {
+  .nav {
+    background-color: rgba(0, 0, 0, 0.85) !important; /* ili boja po želji */
+    transform: none !important; /* uvek vidljiv */
+  }
+  .nav.hidden {
+    transform: none !important; /* sprečava da se sakrije */
+  }
+}
