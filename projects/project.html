@@ -28,10 +28,11 @@
     <link href="https://cdn.prod.website-files.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="https://cdn.prod.website-files.com/img/webclip.png" rel="apple-touch-icon">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+
 </head>
 
 <body class="body-2" cz-shortcut-listen="true">
-    <div style="transform: translate3d(0px, -200px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 0; display: none;"
+    <div style="transform: translate3d(0px, -200px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 0 !important; display: none;"
         class="modal_contact">
         <div class="contact-modal-container">
             <h3 class="text-subtitle workflow-card-title modal-contact-title">Drop me a quick message</h3>
@@ -82,7 +83,7 @@
         <div data-w-id="922c3ac5-1a35-af6b-d532-8e30f681adac" class="modal-bg"></div>
     </div>
     <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
-        role="banner" class="nav w-nav">
+        role="banner" class="nav w-nav" id="nav">
         <div class="container-large"><a href="#" class="w-nav-brand"><img
                     src="https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/6807a6580333c1896c1e45d8_Todorovic%20Zoran.svg"
                     loading="lazy" alt="Zoran Todorovic Logo" class="image_desktop"><img
@@ -127,30 +128,53 @@
                         <p class="project-page-tag">Figma</p>
                     </div>
                 </div>
-                <div class="project-page-image-wrapper">
+                <!--<div class="project-page-image-wrapper">
                     <div class="gallery-container">
                         <div class="gallery-slider">
                             <img src="../assets/ss1.webp" class="gallery-slide active" alt="Image 1">
                             <img src="../assets/ss2.png" class="gallery-slide" alt="Image 2">
                             <img src="../assets/ss3.png" class="gallery-slide" alt="Image 3">
                         </div>
-                        <!-- Gradient buttons -->
+                        <-- Gradient buttons
                         <div class="gallery-gradient-btn prev">
                             <img src="https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/68092c1b23161063498e8806_arrow-down.svg"
                                 alt="">
                         </div>
                         <div class="gallery-gradient-btn next">
-                            <img style="transform: rotateY(90deg);"src="https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/68092c1b23161063498e8806_arrow-down.svg"
+                            <img style="transform: rotateY(90deg);"
+                                src="https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/68092c1b23161063498e8806_arrow-down.svg"
                                 alt="">
 
                         </div>
 
                         <div class="gallery-dots"></div>
+                    </div> -->
+
+                <div class="gallery-container">
+                    <button class="nav-button left">&#10094;</button>
+                    <div class="gallery-wrapper" id="gallery">
+                        <div class="gallery-item"></div>
+                        <div class="gallery-item"><img src="../assets/ss1.webp" alt="Nature"></div>
+                        <div class="gallery-item"><img src="../assets/ss2.png" alt="Colors"></div>
+                        <div class="gallery-item"><img src="../assets/ss3.png" alt="Abstract"></div>
+                        <div class="gallery-item"><img src="../assets/ss2.png" alt="Portrait"></div>
+                        <div class="gallery-item"><img src="../assets/ss1.webp" alt="Blue Light"></div>
+                        <div class="gallery-item"></div>
                     </div>
+                    <button class="nav-button right">&#10094;</button>
                 </div>
+
+
+
+                <div class="dots" id="dots"></div>
             </div>
-        </div><img
-            src="https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/680e0b48d79ba405f0857733_green_big_compressed.webp"
+            <div class="projet-page-buttons">
+                <a data-w-id="6853fd3b-c9bc-a9da-e100-4dcd2d9046ee" href="#" class="button-cta button-nav w-button">View
+                    Project</a>
+            </div>
+        </div>
+        </div>
+        <img src="https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/680e0b48d79ba405f0857733_green_big_compressed.webp"
             loading="lazy" sizes="(max-width: 1072px) 100vw, 1072px"
             srcset="https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/680e0b48d79ba405f0857733_green_big_compressed-p-500.webp 500w, https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/680e0b48d79ba405f0857733_green_big_compressed-p-800.webp 800w, https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/680e0b48d79ba405f0857733_green_big_compressed.webp 1072w"
             alt="" class="project-page-blob">
@@ -230,48 +254,85 @@
             src="https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-text-d2.c82cec3b78.svg"
             alt="Made in Webflow"></a>
 
+    <script src="../js/index.js"></script>
+
     <script>
-        const slides = document.querySelectorAll('.gallery-slide');
-        const prevBtn = document.querySelector('.gallery-gradient-btn.prev');
-        const nextBtn = document.querySelector('.gallery-gradient-btn.next');
-        const dotsContainer = document.querySelector('.gallery-dots');
+        const gallery = document.getElementById('gallery');
+        const items = [...gallery.querySelectorAll('.gallery-item')].filter(item =>
+            item.querySelector('img')
+        );
+        const title = document.getElementById('image-title');
+        const desc = document.getElementById('image-desc');
+        const dotsContainer = document.getElementById('dots');
 
-        let currentSlide = 0;
 
-        slides.forEach((_, index) => {
-            const dot = document.createElement('span');
-            dot.addEventListener('click', () => showSlide(index));
+        window.addEventListener('load', () => {
+
+            const middleIndex = Math.floor(items.length / 2);
+            const middleItem = items[middleIndex];
+
+            // Scroll to middle item
+            const scrollX = middleItem.offsetLeft - gallery.scrollLeft - gallery.getBoundingClientRect().left + gallery.scrollLeft;
+            gallery.scrollTo({ left: scrollX, behavior: 'smooth' });
+
+            // Optional: update dot and arrows manually after scroll
+            //updateActiveDot();
+            //updateArrowVisibility();
+        });
+
+        items.forEach((item, idx) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (idx === 0) dot.classList.add('active');
+
+            dot.addEventListener('click', () => {
+                const scrollX = item.offsetLeft - gallery.scrollLeft - gallery.getBoundingClientRect().left + gallery.scrollLeft;
+                gallery.scrollTo({ left: scrollX, behavior: 'smooth' });
+
+            });
+
             dotsContainer.appendChild(dot);
         });
 
-        const dots = dotsContainer.querySelectorAll('span');
+        const dots = dotsContainer.querySelectorAll('.dot');
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                dots[i].classList.remove('active');
-                if (i === index) {
-                    slide.classList.add('active');
-                    dots[i].classList.add('active');
+        const updateActive = () => {
+            let closest = null;
+            let minDist = Infinity;
+            let activeIndex = 0;
+
+            items.forEach((item, i) => {
+                const box = item.getBoundingClientRect();
+                const centerDist = Math.abs(box.left + box.width / 2 - window.innerWidth / 2);
+                if (centerDist < minDist) {
+                    minDist = centerDist;
+                    closest = item;
+                    activeIndex = i;
                 }
             });
-            currentSlide = index;
-        }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
+            items.forEach(item => item.classList.remove('active'));
+            closest.classList.add('active');
 
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
 
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[activeIndex].classList.add('active');
+        };
 
-        showSlide(0);
+        gallery.addEventListener('scroll', () => {
+            requestAnimationFrame(updateActive);
+        });
+
+        // Buttons
+        document.querySelector('.nav-button.left').addEventListener('click', () => {
+            gallery.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+
+        document.querySelector('.nav-button.right').addEventListener('click', () => {
+            gallery.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+
+        window.addEventListener('load', updateActive);
     </script>
 </body>
 
