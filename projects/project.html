@@ -2,7 +2,7 @@
 <html data-wf-domain="zorantodorovicdev.webflow.io" data-wf-page="6818db1183d76927f7f289e1"
     data-wf-site="6762e7637cfbd064c3351761" data-wf-status="1" lang="en" data-wf-collection="6818db1183d76927f7f289bf"
     data-wf-item-slug="domaci-metal"
-    class="w-mod-js w-mod-ix wf-ubuntu-n3-active wf-ubuntu-i3-active wf-ubuntu-n4-active wf-ubuntu-i4-active wf-ubuntu-n5-active wf-ubuntu-i5-active wf-ubuntu-n7-active wf-ubuntu-i7-active wf-ptsans-n4-active wf-ptsans-i4-active wf-ptsans-n7-active wf-ptsans-i7-active wf-active">
+    class="w-mod-js wf-ubuntu-i3-active wf-ubuntu-n3-active wf-ubuntu-n4-active wf-ubuntu-i4-active wf-ubuntu-n5-active wf-ubuntu-i5-active wf-ubuntu-n7-active wf-ubuntu-i7-active wf-ptsans-n4-active wf-ptsans-i4-active wf-ptsans-n7-active wf-ptsans-i7-active wf-active w-mod-ix">
 
 <head>
     <style>
@@ -10,6 +10,14 @@
             outline: none;
         }
     </style>
+    <script>
+        // Sakrij modal odmah pre nego što se bilo šta nacrta
+        (function () {
+            const style = document.createElement('style');
+            style.innerHTML = `.modal_contact { display: none; }`; // zameni .modal ako treba
+            document.head.appendChild(style);
+        })();
+    </script>
     <meta charset="utf-8">
     <title>Zoran Portfolio</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -32,13 +40,16 @@
 </head>
 
 <body class="body-2" cz-shortcut-listen="true">
-    <div style="transform: translate3d(0px, -200px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 0 !important; display: none;"
+    <div data-w-id="922c3ac5-1a35-af6b-d532-8e30f681ad80"
+        style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; display: flex; transform-style: preserve-3d;"
         class="modal_contact">
         <div class="contact-modal-container">
             <h3 class="text-subtitle workflow-card-title modal-contact-title">Drop me a quick message</h3>
             <div class="w-form">
                 <form id="wf-form-Message" name="wf-form-Message" data-name="Message" method="get"
-                    class="contact-modal-form" aria-label="Message"><label for="name-2"
+                    class="contact-modal-form" data-wf-page-id="6818db1183d76927f7f289e1"
+                    data-wf-element-id="922c3ac5-1a35-af6b-d532-8e30f681ad85"
+                    data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e" aria-label="Message"><label for="name-2"
                         class="modal-contact-form-label">Your Name<span class="text-orange">*</span></label><input
                         class="contact-modal-form-input w-input" maxlength="256" name="name-2" data-name="Name 2"
                         placeholder="Enter your name" type="text" id="name-2" required=""><label for="email-2"
@@ -49,12 +60,12 @@
                         placeholder="Type your message here..." maxlength="5000" id="Message-2" name="Message-2"
                         data-name="Message 2" class="contact-modal-form-input message-input w-input"></textarea>
                     <div class="modal-contact-buttons"><input type="submit" data-wait="Please wait..."
-                            class="button-cta-orange w-button" value="Send Message"
-                            style="width: 410px; min-width: 410px;"><a data-w-id="922c3ac5-1a35-af6b-d532-8e30f681ad97"
-                            href="#" class="button-link modal-contact-close-btn w-button">cancel</a></div>
+                            class="button-cta-orange w-button" value="Send Message"><a
+                            data-w-id="922c3ac5-1a35-af6b-d532-8e30f681ad97" href="#"
+                            class="button-link modal-contact-close-btn w-button">cancel</a></div>
                     <div>
-                        <div><input type="hidden" name="cf-turnstile-response" id="cf-chl-widget-04jk8_response"
-                                value="0.YzZ8z1ni81VDO4vC_6zUDSLTIoX5LuEHiOn8P7ImHzVq1RN7F14ba7juR4COHdfeiUGr4Wu0llzAV3b-JPKBuQOFy7aSMGv43fe4XroR0NcxIjPaFJxrlbVCfTt-LWaDsC7feLIy9-6n72WFfPzDM3GnQLfhY8q_VqLLeio9s50acuMAjV7j0gcuf0QV1QpaTpPyd6qsXdRrPmNR851BuyYWUFeyc-wa02gyyHs--aRBYOh2O8IAZL-1Nv6ajXjIurk-WQkLOQOOidQAsjumTUGYyjD79vDCedpBnaKbVII0pbUvhm35KG0jVYc0efsZD5zjfsM8U8N-i_Aa1hjBTjmwSKqGFL0jz8gn6DTAVbao34ia7POHXP5bj217r2eVr-JzBzBjQpCVoCRtD0rYEbXAbpmja13Ib07-ndGh7latEzgf1MvFAOT92DL8FiJhRzJHklsMgyLlBh7xtQg8RxM5QeNyPiHbHr3A44QcoO-4AJMWlapWqAxKfD5olCLCvD93fV89nKbdKu0_y4Tm9m0UkiZlJkqW-Z15WGDI---1bJrPvqU4e5vWOMOct60VHGtg2WvTsYP8oHuH3JVDyVCfA2y4CvDrRGl3y6VUyXG2J2oZ1hijsZ9UghVBCUNg8R8pgEQAg-IMrk486R-lOkbqtjF_CCpDxaI4WITZP4R8duXhTX7gCXHbmXxxKayP_raBM89qrXqabM_iSJx4GVnAONaA-qpfxkLeDu-PK0-nuAWSHH6gWTIST5vp2vfsLiRRA3P6KUzwSeh1HkY8rHDcNBzXXGFWB0TIhC53rbSKHy_2XSi5RWxI6C8w9Ew2sdyvYkMxhMHinfoRn8vovKiwZk9zcms5mNlJtjqAmJ8.3Dxd0aSJho7FRibHVC-83A.9306e44783d603f490bf096d7ebbf9d6ecb04a97921dd1b4154a734d7c7a4e26">
+                        <div><input type="hidden" name="cf-turnstile-response" id="cf-chl-widget-hv2ll_response"
+                                value="0.LiSFU9asKNJ42RaCQ528sZuIXPWGCmHPGKP0I-MEZnQEzcCeXKaQzRHI4ehKVz3thfkS1c7udHIVTweYbG5F2_7DrGm5bU-BCD8QQEpavUab4k_mW3wa2FcGICrQQLgdx5_gd2vs0StCaK5-TVnPKw7Zk5Mdtd5ABWuuY5OTSA5Gltcsw0BJSQIrYbECZHuHdGqsH7LU3ZDsqVkBIJLFzwNir0BQVKjUzMj5NBmPyasl8JI-Q1vCSNo3Ic5VoYZmSn1QBzn_NxQlQV9z9UM9Y3Wz2wZcxoC7f4puU0WAxEy6H-auAIFUJdoL31HqGREpFhAe4o3TJ1WH3W2qmSFyMk9hpwc1LxgNL6thVJ2HCImECcrraYYfjFSZOntOZhhADWYzY4gahKSmEfIq_Zk2Wy89X-v1PhuagbynRvvmX7mB0zAb1AmcnATPZgRknCtPm43ehYAusRjhtIv4l3NkK6KjjBMS1EXn8v2Pml2wr_NQ-KWgRcuYQOeeMpsKfEcsJWfFQ_mD7HzKQsuQwypDgnEMOZ4dh3am7YnB9dcdKzr9pQ-_VjvO0QFqRsiQWuCUOGfJgA3XUA0UvuAbqrjjoAd11C42b2A4vcbOd0LADn1pwNyTNfGuIDGeTCWHGVe-BWUVIi8HRqbW-1Py9oHX6XOMMMyWZHosnS9X-xtMa2Rqc44lakhoXN3p1O8OvI1OhGHox6lT8dyxBTgBNxVBO3RGM3e7I4rZjF34R02QQmDHe-oKOV_2sYbkceI1Cz-0xpdvKbdOlGM2u2q-pYIZMjRfK9JNUag2T70AWkUVFD8rnLCd7s-YRuTYQWn7OTffFBz5NRZKN--cHQCK2B8W-E5nC_RiWqAFN2gIjLXVKUE.LbyErBeCNPz64xfwlMFSxA.bcfee0d61517caefbb59a7c389cc47ee003dc9398014698fc2f2bf0a9594a276">
                         </div>
                     </div>
                 </form>
@@ -91,12 +102,12 @@
                     loading="lazy" alt="Zoran Todorovic Logo Mobile" class="image_mobile"></a>
             <nav role="navigation" class="nav-menu w-nav-menu">
                 <div class="links-wrapper">
-                    <p class="text-desc text-neon text-center nav-mobile-label">Links</p><a href="#"
-                        class="nav-link text-light w-nav-link">Home</a><a href="#"
-                        class="nav-link text-light w-nav-link">About</a><a href="#"
-                        class="nav-link text-light w-nav-link">Projects</a><a href="#"
-                        class="nav-link text-light w-nav-link">FAQ</a><a href="#contact"
-                        class="nav-link text-light w-nav-link">Contact</a>
+                    <p class="text-desc text-neon text-center nav-mobile-label">Links</p>
+                    <a href="/" class="nav-link text-light w-nav-link">Home</a>
+                    <a href="/#about" class="nav-link text-light w-nav-link">About</a>
+                    <a href="/#projects" class="nav-link text-light w-nav-link">Projects</a>
+                    <a href="/#faq" class="nav-link text-light w-nav-link">FAQ</a>
+                    <a href="/#contact" class="nav-link text-light w-nav-link">Contact</a>
                 </div>
             </nav>
             <div class="nav-right-wrapper"><a data-w-id="6853fd3b-c9bc-a9da-e100-4dcd2d9046ee" href="#"
@@ -114,7 +125,9 @@
         </div>
         <div class="w-nav-overlay" data-wf-ignore="" id="w-nav-overlay-0"></div>
     </div>
-    <section class="project-page-details">
+    <section class="project-page-details" data-w-id="d12c1260-5950-ec7e-59ca-e5a5a2e3ee0a"
+        style="transform: translate3d(0px, 40px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 0;">
+        >
         <div class="container">
             <div class="project-page-wrapper">
                 <div class="project-page-content-wrapper">
@@ -245,10 +258,11 @@
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6762e7637cfbd064c3351761"
         type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script>
-    <script src="https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/js/webflow.schunk.4a394eb5af8156f2.js"
+    <script src="https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/js/webflow.schunk.36b8fb49256177c8.js"
         type="text/javascript"></script>
-    <script src="https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/js/webflow.5c351fb4.99a469cc353e6db1.js"
-        type="text/javascript"></script><a class="w-webflow-badge" href="https://webflow.com?utm_campaign=brandjs"><img
+    <script src="https://cdn.prod.website-files.com/6762e7637cfbd064c3351761/js/webflow.f0f771bd.eb8f846b3b517a6a.js"
+        type="text/javascript"></script>
+    <a class="w-webflow-badge" href="https://webflow.com?utm_campaign=brandjs"><img
             src="https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon-d2.89e12c322e.svg" alt=""
             style="margin-right: 4px; width: 26px;"><img
             src="https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-text-d2.c82cec3b78.svg"
@@ -256,84 +270,7 @@
 
     <script src="../js/index.js"></script>
 
-    <script>
-        const gallery = document.getElementById('gallery');
-        const items = [...gallery.querySelectorAll('.gallery-item')].filter(item =>
-            item.querySelector('img')
-        );
-        const title = document.getElementById('image-title');
-        const desc = document.getElementById('image-desc');
-        const dotsContainer = document.getElementById('dots');
-
-
-        window.addEventListener('load', () => {
-
-            const middleIndex = Math.floor(items.length / 2);
-            const middleItem = items[middleIndex];
-
-            // Scroll to middle item
-            const scrollX = middleItem.offsetLeft - gallery.scrollLeft - gallery.getBoundingClientRect().left + gallery.scrollLeft;
-            gallery.scrollTo({ left: scrollX, behavior: 'smooth' });
-
-            // Optional: update dot and arrows manually after scroll
-            //updateActiveDot();
-            //updateArrowVisibility();
-        });
-
-        items.forEach((item, idx) => {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (idx === 0) dot.classList.add('active');
-
-            dot.addEventListener('click', () => {
-                const scrollX = item.offsetLeft - gallery.scrollLeft - gallery.getBoundingClientRect().left + gallery.scrollLeft;
-                gallery.scrollTo({ left: scrollX, behavior: 'smooth' });
-
-            });
-
-            dotsContainer.appendChild(dot);
-        });
-
-        const dots = dotsContainer.querySelectorAll('.dot');
-
-        const updateActive = () => {
-            let closest = null;
-            let minDist = Infinity;
-            let activeIndex = 0;
-
-            items.forEach((item, i) => {
-                const box = item.getBoundingClientRect();
-                const centerDist = Math.abs(box.left + box.width / 2 - window.innerWidth / 2);
-                if (centerDist < minDist) {
-                    minDist = centerDist;
-                    closest = item;
-                    activeIndex = i;
-                }
-            });
-
-            items.forEach(item => item.classList.remove('active'));
-            closest.classList.add('active');
-
-
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[activeIndex].classList.add('active');
-        };
-
-        gallery.addEventListener('scroll', () => {
-            requestAnimationFrame(updateActive);
-        });
-
-        // Buttons
-        document.querySelector('.nav-button.left').addEventListener('click', () => {
-            gallery.scrollBy({ left: -320, behavior: 'smooth' });
-        });
-
-        document.querySelector('.nav-button.right').addEventListener('click', () => {
-            gallery.scrollBy({ left: 320, behavior: 'smooth' });
-        });
-
-        window.addEventListener('load', updateActive);
-    </script>
+    <script src="../js/projectSlider.js"></script>
 </body>
 
 </html>
