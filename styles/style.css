@@ -4536,8 +4536,8 @@ input.button-cta-orange[disabled] {
   flex: 0 0 auto;
   scroll-snap-align: center;
   width: 100%;
-  max-width: 500px;
-  aspect-ratio: 16/11;
+  max-width: 550px;
+  aspect-ratio: 16/9.5;
   transition: transform 0.3s ease;
   position: relative;
 }
