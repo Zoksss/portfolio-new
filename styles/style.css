@@ -4614,7 +4614,7 @@ input.button-cta-orange[disabled] {
 }
 
 .dot.active {
-  background: orange;
+  background: var(--accent_orange);
 }
 
 .projet-page-buttons {
