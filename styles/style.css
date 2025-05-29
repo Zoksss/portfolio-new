@@ -3521,6 +3521,7 @@ input.button-cta-orange[disabled] {
   align-items: center;
   margin-top: 40px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .project-page-tag {
