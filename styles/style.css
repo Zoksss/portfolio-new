@@ -3399,6 +3399,7 @@ input.button-cta-orange[disabled] {
   position: absolute;
   top: 0;
   left: 0;
+  object-fit: cover;
 }
 
 .project-title-wrapper {
