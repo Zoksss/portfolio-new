@@ -27,7 +27,7 @@
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
 </head>
 
-<body class="body" cz-shortcut-listen="true">
+<body class="body" cz-shortcut-listen="true" data-scroll>
     <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
         role="banner" class="nav w-nav" id="nav">
         <div class="container-large"><a href="/" class="w-nav-brand"><img
@@ -37,11 +37,11 @@
                     loading="lazy" alt="Zoran Todorovic Logo Mobile" class="image_mobile"></a>
             <nav role="navigation" class="nav-menu w-nav-menu">
                 <div class="links-wrapper">
-                    <p class="text-desc text-neon text-center nav-mobile-label">Links</p><a href="#home"
-                        class="nav-link text-light w-nav-link w--current">Home</a><a href="#about"
-                        class="nav-link text-light w-nav-link">About</a><a href="#projects"
-                        class="nav-link text-light w-nav-link">Projects</a><a href="#faq"
-                        class="nav-link text-light w-nav-link">FAQ</a><a href="#contact"
+                    <p class="text-desc text-neon text-center nav-mobile-label">Links</p><a data-scroll-to="home"
+                        class="nav-link text-light w-nav-link">Home</a>
+                    <a data-scroll-to="about" class="nav-link text-light w-nav-link">About</a><a
+                        data-scroll-to="projects" class="nav-link text-light w-nav-link">Projects</a><a
+                        data-scroll-to="faq" class="nav-link text-light w-nav-link">FAQ</a><a data-scroll-to="contact"
                         class="nav-link text-light w-nav-link">Contact</a>
                 </div>
             </nav>
@@ -627,6 +627,8 @@
             src="https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-text-d2.c82cec3b78.svg"
             alt="Made in Webflow"></a>
 
+    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
+    <script src="js/lenis.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7K11XBPY8W"></script>
     <script>
@@ -636,6 +638,7 @@
 
         gtag('config', 'G-7K11XBPY8W');
     </script>
+
     <script src="./js/index.js"></script>
 
 </body>
