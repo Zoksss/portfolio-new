@@ -1,3 +1,4 @@
+
 window.addEventListener('DOMContentLoaded', () => {
   // Inicijalizacija Lenis
   const lenis = new Lenis({

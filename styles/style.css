@@ -26,7 +26,7 @@ summary {
   display: block;
 }
 
-a{
+a {
   cursor: pointer !important;
 }
 
@@ -2419,6 +2419,7 @@ a {
 .nav-link.text-light.w--current {
   color: var(--accent_neon);
 }
+
 a.active {
   color: var(--accent_neon);
 }
@@ -2574,6 +2575,14 @@ input.button-cta-orange[disabled] {
 
 .text-desc.text-center.workflow-desc.testaminial-text {
   min-height: 220px;
+}
+
+.testamonial-client_name{
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-weight: 400;
+  color: var(--gray)
 }
 
 .text-desc.text-center.modal-container-text {
@@ -2934,6 +2943,7 @@ input.button-cta-orange[disabled] {
 
 .section_testamonials.padding-top-125 {
   padding-top: 125px;
+  margin-top: 75px;
 }
 
 .section_testamonials.padding-top-125.padding-bottom-125 {
@@ -4541,6 +4551,11 @@ input.button-cta-orange[disabled] {
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
+
+.gallery-wrapper, #gallery {
+  scroll-behavior: smooth !important;
+}
+
 
 .gallery-wrapper::-webkit-scrollbar {
   display: none;
